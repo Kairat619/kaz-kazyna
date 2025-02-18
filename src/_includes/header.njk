@@ -1,0 +1,200 @@
+ <!-- ===== Header start ===== -->
+    <header
+      x-data="
+        {
+          navbarOpen: false,
+          dropdownOpen: false
+        }
+      "
+      :class="scrolledFromTop ? 'kf gl zf rl ij oj ' : ' lf hl' "
+      class="f ba qb jc be c"
+    >
+      <div class="a">
+        <div
+          class="e ha qb be ee"
+        >
+          <div class="kc zc ng">
+            <a
+              href="/"
+              :class="scrolledFromTop && 'og gp' "
+              class="ob jc ah ip"
+            >
+              <img
+                src="/assets/images/logo/logo.svg"
+                alt="logo"
+                class="jc xk"
+              />
+              <img
+                src="/assets/images/logo/logo-white.svg"
+                alt="logo"
+                class="sb jc wk"
+              />
+            </a>
+          </div>
+          <div class="qb jc be ce ng">
+            <div>
+              <button
+                @click="navbarOpen = !navbarOpen"
+                :class="navbarOpen && 'navbarTogglerActive' "
+                id="navbarToggler"
+                class="d g h/2 ob qd/2 me pg qg mj qk to"
+              >
+                <span
+                  :class="navbarOpen && 'sd i' "
+                  class="e ia ob tb lc mf il"
+                ></span>
+                <span
+                  :class="navbarOpen && 'fj' "
+                  class="e ia ob tb lc mf il"
+                ></span>
+                <span
+                  :class="navbarOpen && 'j td' "
+                  class="e ia ob tb lc mf il"
+                ></span>
+              </button>
+              <nav
+                :class="!navbarOpen && 'sb' "
+                id="navbarCollapse"
+                class="d g k jc _c me kf rg sg jj fl fo qo uo cp dp hp xp bq"
+              >
+                <ul class="vq ro">
+                  <li class="xi ul">
+                    <a
+                      href="/"
+                      class="qb tg gi oi bj kk vl em ko so ip cq 2xl:ud-ml-12"
+                    >
+                    Home
+                    </a>
+                  </li>
+               
+                  <li>
+                    <a
+                      href="/#features"
+                      class=" qb tg gi oi xi kk ul em ko so ip cq 2xl:ud-ml-12"
+                    >
+                      Features
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="/#roadmap"
+                      class=" qb tg gi oi xi kk ul em ko so ip cq 2xl:ud-ml-12"
+                    >
+                      Roadmap
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/#contact"
+                      class=" qb tg gi oi xi kk ul em ko so ip cq 2xl:ud-ml-12"
+                    >
+                      Support
+                    </a>
+                  </li>
+                  <li class="sk submenu-item e">
+                    <a
+                      href="javascript:void(0)"
+                      @click="dropdownOpen = !dropdownOpen"
+                      class="e qb tg gi oi xi uj vj wj/2 xj yj zj _j ak bk ck dk tk ul hm ko so ip np op zp cq 2xl:ud-ml-12"
+                    >
+                      A/文
+                    </a>
+                    <div
+                      :class="dropdownOpen ? 'ob' : 'sb qo ' "
+                      class="submenu e k l me kf pj sj uk fl eo go ho vo ep wp yp _p aq"
+                    >
+                      <a
+                        href="/"
+                        class="ob ne ug hi yi kk vl fm jp"
+                      >
+                        Қазақша
+                      </a>
+
+                      <a
+                        href="/en"
+                        class="ob ne ug hi yi kk vl fm jp"
+                      >
+                        English
+                      </a>
+
+                      <a
+                        href="/cn"
+                        class="ob ne ug hi yi kk vl fm jp"
+                      >
+                        中文
+                      </a>
+
+                      <a
+                        href="/ru"
+                        class="ob ne ug hi yi kk vl fm jp"
+                      >
+                        Русский
+                      </a>
+
+                     
+                    </div>
+                  </li>
+                  
+                </ul>
+              </nav>
+            </div>
+            <div
+              class="qb ce lh pp oq 2xl:ud-pl-20"
+            >
+              <div class="oa">
+                <label
+                  for="darkToggler"
+                  class="qb ub mc vd be de oe nf jl"
+                >
+                  <input
+                    type="checkbox"
+                    name="darkToggler"
+                    id="darkToggler"
+                    class="b"
+                    aria-label="darkToggler"
+                  />
+                  <span
+                    class="qb vb nc be de oe of zi hl ul"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      class="cg"
+                    >
+                      <path
+                        d="M4.50663 3.2267L3.30663 2.03337L2.36663 2.97337L3.55996 4.1667L4.50663 3.2267ZM2.66663 7.00003H0.666626V8.33337H2.66663V7.00003ZM8.66663 0.366699H7.33329V2.33337H8.66663V0.366699ZM13.6333 2.97337L12.6933 2.03337L11.5 3.2267L12.44 4.1667L13.6333 2.97337ZM11.4933 12.1067L12.6866 13.3067L13.6266 12.3667L12.4266 11.1734L11.4933 12.1067ZM13.3333 7.00003V8.33337H15.3333V7.00003H13.3333ZM7.99996 3.6667C5.79329 3.6667 3.99996 5.46003 3.99996 7.6667C3.99996 9.87337 5.79329 11.6667 7.99996 11.6667C10.2066 11.6667 12 9.87337 12 7.6667C12 5.46003 10.2066 3.6667 7.99996 3.6667ZM7.33329 14.9667H8.66663V13H7.33329V14.9667ZM2.36663 12.36L3.30663 13.3L4.49996 12.1L3.55996 11.16L2.36663 12.36Z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="qb vb nc be de oe lf xi kl vl"
+                  >
+                    <svg
+                      width="13"
+                      height="15"
+                      viewBox="0 0 13 15"
+                      class="cg"
+                    >
+                      <path
+                        d="M10.6111 12.855C11.591 12.1394 12.3151 11.1979 12.7723 10.1623C10.4824 10.4065 8.1342 9.46314 6.67948 7.47109C5.22476 5.47905 5.04093 2.95516 5.97054 0.848179C4.84491 0.968503 3.72768 1.37162 2.74781 2.08719C-0.224105 4.25747 -0.874706 8.43084 1.29558 11.4028C3.46586 14.3747 7.63923 15.0253 10.6111 12.855Z"
+                      />
+                    </svg>
+                  </span>
+                </label>
+              </div>
+              <div class="sb pm">
+                <a
+                  href="/pages/blog-grid"
+                  class="qb be de oe re ze vg wg ii oi xi qj ek fk lk zk vl am fm lg:px-4 xl:px-8"
+                >
+                  Blog
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ===== Header end ===== -->
